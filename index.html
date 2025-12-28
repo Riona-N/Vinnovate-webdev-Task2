@@ -411,6 +411,30 @@
         <div class="connect-body" aria-hidden="true">
             <a class="social-link" href="https://www.instagram.com/pvsindhu1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
             <a class="social-link" href="https://x.com/pvsindhu1" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i> X</a>
+
+            <form id="fanForm" class="fan-form" aria-label="Send fan message" novalidate>
+                <h3 class="fan-title" data-en="Send Fan Mail" data-es="Enviar Mensaje">Send Fan Mail</h3>
+
+                <label for="fanName" class="sr-only" data-en="Name" data-es="Nombre">Name (optional)</label>
+                <input id="fanName" name="name" class="fan-input" type="text" placeholder="Your name (optional)" maxlength="100" />
+
+                <label for="fanEmail" class="sr-only" data-en="Email" data-es="Correo">Email (optional)</label>
+                <input id="fanEmail" name="email" class="fan-input" type="email" placeholder="you@example.com (optional)" autocomplete="email" />
+
+                <label for="fanMessage" data-en="Message" data-es="Mensaje">Message</label>
+                <textarea id="fanMessage" name="message" class="fan-textarea" required rows="4" placeholder="Write your message or describe your fan art"></textarea>
+
+                <label for="fanArt" class="sr-only" data-en="Attach fan art" data-es="Adjuntar obra">Attach fan art (optional)</label>
+                <input id="fanArt" name="art" class="fan-input" type="file" accept="image/*" aria-describedby="fanArtHelp" />
+
+                <div id="fanArtHelp" class="sr-only">Images only, max 5MB recommended.</div>
+
+                <button type="submit" class="fan-submit" aria-label="Send fan message">Send</button>
+
+                <div id="fanFeedback" class="fan-feedback" role="status" aria-live="polite"></div>
+
+                <div class="fan-note" aria-hidden="true" style="font-size:0.8rem;color:#444;margin-top:6px;">Messages are stored locally for demo purposes only.</div>
+            </form>
         </div>
     </section>  
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -830,16 +830,68 @@ window.addEventListener('afterprint', () => {
     applyTheme();
 });
 
-// Connect / Fan Form handling removed
+// Connect / Fan Form handling
+(function() {
+    const fanForm = document.getElementById('fanForm');
+    if (!fanForm) return;
+
+    const feedbackEl = document.getElementById('fanFeedback');
+
+    fanForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        setFeedback('Sending...');
+        const name = (fanForm.name.value || '').trim();
+        const email = (fanForm.email.value || '').trim();
+        const message = (fanForm.message.value || '').trim();
+        const artInput = fanForm.art;
+
+        if (!message) {
+            setFeedback('Please enter a message.', true);
+            return;
+        }
+
+        let artData = null;
+        if (artInput && artInput.files && artInput.files[0]) {
+            const file = artInput.files[0];
+            if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                setFeedback('Attachment is too large (max 5MB).', true);
+                return;
+            }
+            try {
+                artData = await readFileAsDataURL(file);
+            } catch (err) {
+                setFeedback('Could not read attachment.', true);
+                return;
+            }
+        }
+
+        const stored = JSON.parse(localStorage.getItem('fanMessages') || '[]');
+        stored.push({ name, email, message, art: artData, ts: Date.now() });
+        localStorage.setItem('fanMessages', JSON.stringify(stored));
+        fanForm.reset();
+        setFeedback('Thanks! Your message has been saved (demo).');
+        setTimeout(() => setFeedback(''), 5000);
+    });
+
+    function setFeedback(msg, isError = false) {
+        if (!feedbackEl) return;
+        feedbackEl.textContent = msg;
+        feedbackEl.style.color = isError ? 'var(--secondary-color)' : '';
+    }
+
+    function readFileAsDataURL(file) {
+        return new Promise((resolve, reject) => {
+            const r = new FileReader();
+            r.onload = () => resolve(r.result);
+            r.onerror = () => reject(new Error('File read error'));
+            r.readAsDataURL(file);
+        });
+    }
+})();
 
 // ===== Visibility Change Handler =====
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        document.title = '🏎️ Come back to the track!';
-    } else {
-        document.title = 'PV Sindhu - Olympic Medalist & World Champion';
-    }
-});
+// Title changes on tab visibility were removed to keep the page title consistent.
+// If desired in future, add non-intrusive visibility behavior here (e.g. subtle badge updates).
 
 // ===== Online/Offline Detection =====
 window.addEventListener('online', () => {
