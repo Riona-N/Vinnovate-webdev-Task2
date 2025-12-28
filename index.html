@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PV Sindhu - Olympic Medalist & World Champion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language & Theme Toggle -->
+    <!-- Controls removed: language and theme toggles handled in settings panel -->
+
+    <!-- Settings Panel -->
+    <section class="settings-panel" aria-label="Display and language settings" tabindex="0" aria-expanded="false">
+        <div class="settings-header">
+            <i class="fas fa-sliders-h" aria-hidden="true"></i>
+            <span data-en="Settings" data-es="Configuración">Settings</span>
+        </div>
+        <div class="settings-group">
+            <label for="settingsLanguage" data-en="Language" data-es="Idioma">Language</label>
+            <select id="settingsLanguage" aria-label="Select language">
+                <option value="en" data-en="English" data-es="Inglés">English</option>
+                <option value="es" data-en="Spanish" data-es="Español">Español</option>
+            </select>
+        </div>
+        <div class="settings-group">
+            <label for="settingsTheme" data-en="Theme" data-es="Tema">Theme</label>
+            <select id="settingsTheme" aria-label="Select theme">
+                <option value="dark" data-en="Dark" data-es="Oscuro">Dark</option>
+                <option value="light" data-en="Light" data-es="Claro">Light</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text" data-en="PV SINDHU" data-es="PV SINDHU">PV SINDHU</span>
+                <span class="logo-number"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-es="Sobre">About</a></li>
+                <li><a href="#timeline" class="nav-link" data-en="Career" data-es="Carrera">Career</a></li>
+                <li><a href="#media-stats" class="nav-link" data-en="Media & Stats" data-es="Medios y Estadísticas">Media & Stats</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <div class="hero-overlay"></div>
+            <img src="./sindhu.png" alt="Badminton" class="hero-bg">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="PV SINDHU" data-es="PV SINDHU">PV SINDHU</h1>
+            <p class="hero-subtitle" data-en="Olympic Medalist & World Champion" data-es="Medallista Olímpica y Campeona Mundial">Olympic Medalist & World Champion</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label" data-en="Olympic Medals" data-es="Medallas Olímpicas">Olympic Medals</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label" data-en="World Championships" data-es="Campeonatos Mundiales">World Championships</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label" data-en="BWF Titles" data-es="Títulos BWF">BWF Titles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label" data-en="M Followers" data-es="M Seguidores">M Followers</div>
+                </div>
+            </div>
+            <a href="#about" class="cta-btn" data-en="Explore Journey" data-es="Explorar Trayectoria">Explore Journey</a>
+        </div>
+
+        <!-- Decorative Shuttlecock (themed & animated) -->
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div> 
+    </section>
+    <!-- About Section -->
+     <section id="about" class="bio-section video-about">
+    <div class="about-video">
+        <video autoplay muted loop playsinline>
+            <source src="./slowmo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container bio-content">
+        <h2 class="section-title">About PV Sindhu</h2>
+        <p class="bio-text">
+            Pusarla Venkata Sindhu, popularly known as PV Sindhu, is one of India’s greatest badminton players.
+            She is an Olympic medalist and World Champion who has brought global recognition to Indian badminton.
+            Known for her powerful smashes, agility, and mental toughness, Sindhu is the first Indian woman
+            to win two Olympic medals, inspiring millions of young athletes.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- Career Timeline -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Career Milestones" data-es="Hitos de Carrera">Career Milestones</h2>
+            <div class="timeline" aria-label="Career milestones">
+                <div class="timeline-item" data-year="2013">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>First World Championship Medal</h3>
+                        <p>Won bronze at BWF World Championships in Guangzhou</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./first.jpg" alt="2013" loading="lazy">
+                            <p>At just 18 years old, Sindhu became the first Indian woman to win a medal at the BWF World Championships, securing bronze. She also received the Arjuna Award this year.</p>
+                            <a href="https://www.olympics.com/en/news/indian-badminton-players-medals-bwf-world-championships" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2014">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>Commonwealth Games Bronze</h3>
+                        <p>Won bronze at Commonwealth Games in Glasgow</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./CWG bronze.png" alt="2014" loading="lazy">
+                            <p>Sindhu continued her success with another World Championship bronze and won her first Commonwealth Games medal, establishing herself as a rising star in world badminton.</p>
+                            <a href="https://timesofindia.indiatimes.com/commonwealth-games-2014/photosIndias-bronze-medal-winners/cwg2014photoshow/39559251.cms" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2016">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>Olympic Silver Medal</h3>
+                        <p>Historic silver medal at Rio Olympics</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./2016 silver.jpg" alt="2016" loading="lazy">
+                            <p>Sindhu made history by becoming the first Indian woman to win an Olympic silver medal in badminton. She defeated several top players before losing to Carolina Marin in the final. Received Padma Shri and Rajiv Gandhi Khel Ratna Award.</p>
+                            <a href="https://www.olympics.com/en/news/indian-badminton-pv-sindhu-olympics-rio-2016-silver-medal-carolina-marin" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2017">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>World Championship Silver</h3>
+                        <p>Reached World Championship final in Glasgow</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./Glasgow Silver.png" alt="2017" loading="lazy">
+                            <p>Sindhu reached her first World Championship final, winning silver after a thrilling match against Nozomi Okuhara that lasted 110 minutes, one of the longest matches in badminton history.</p>
+                            <a href="https://www.espn.in/badminton/story/_/id/20474546/pv-sindhu-loses-nozomi-okuhara-titanic-battle" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>BWF World Tour Finals Winner</h3>
+                        <p>First Indian to win BWF World Tour Finals</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./BWF.png" alt="2018" loading="lazy">
+                            <p>Sindhu became the first Indian to win the prestigious BWF World Tour Finals, defeating Nozomi Okuhara in the final. She also won Commonwealth Games gold and Asian Games silver this year.</p>
+                            <a href="https://www.olympics.com/en/news/bwf-world-tour-finals-winners-list" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2019">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>World Champion</h3>
+                        <p>Won gold at BWF World Championships in Basel</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./WORLD CHAMPION.png" alt="2019" loading="lazy">
+                            <p>Sindhu achieved her greatest triumph by winning the World Championship gold medal, defeating Nozomi Okuhara in straight sets. This made her the first Indian to win a World Championship gold in women's singles.</p>
+                            <a href="https://www.olympics.com/en/news/indian-badminton-pv-sindhu-how-bwf-world-championships-gold-2019" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>Padma Bhushan Award</h3>
+                        <p>Received India's third-highest civilian honor</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./Padma Bhushan.png" alt="2020" loading="lazy">
+                            <p>Sindhu was honored with the Padma Bhushan, India's third-highest civilian award, recognizing her exceptional contributions to Indian sports and badminton.</p>
+                            <a href="https://www.olympics.com/en/news/national-sports-awards-2020-pv-sindhu-padma-bhushan" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2021">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>Olympic Bronze Medal</h3>
+                        <p>Second Olympic medal at Tokyo Olympics</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./Tokyo Olympics.png" alt="2021" loading="lazy">
+                            <p>Sindhu made history again by becoming the first Indian woman to win two Olympic medals, securing bronze in Tokyo. She defeated He Bingjiao in the bronze medal match.</p>
+                            <a href="https://www.olympics.com/en/news/tokyo-2020-olympics-badminton-india-pv-sindhu-vs-he-bing-jao-bronze-medal-match" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-content">
+                        <div class="timeline-marker"></div>
+                        <h3>Commonwealth Games Gold</h3>
+                        <p>Won gold at Commonwealth Games in Birmingham</p>
+                        <button class="expand-btn">View Details</button>
+                        <div class="timeline-details">
+                            <img src="./Commonwealth.png" alt="2022" loading="lazy">
+                            <p>Sindhu won her first Commonwealth Games gold medal in women's singles, defeating Michelle Li in the final. She also won silver in the mixed team event.</p>
+                            <a href="https://www.olympics.com/en/news/commonwealth-games-2022-badminton-india-women-singles-pv-sindhu-final-result" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Stats Anchor -->
+    <div id="media-stats" class="media-stats-anchor" aria-hidden="true"></div>
+
+    <!-- Media Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Media Gallery" data-es="Galería de Medios">Media Gallery</h2>
+
+            <div class="gallery-controls">
+                <div class="gallery-filter">
+                    <div class="filter-group">
+                        <label for="galleryYear" data-en="Year" data-es="Año">Year</label>
+                        <select id="galleryYear" aria-label="Filter by year">
+                            <option value="all" data-en="All Years" data-es="Todos">All Years</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="galleryEvent" data-en="Event" data-es="Evento">Event</label>
+                        <select id="galleryEvent" aria-label="Filter by event">
+                            <option value="all" data-en="All Events" data-es="Todos">All Events</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group type-filters" role="toolbar" aria-label="Filter by media type">
+                        <button class="filter-btn active" data-filter="all" data-en="All" data-es="Todos">All</button>
+                        <button class="filter-btn" data-filter="video" data-en="Videos" data-es="Vídeos">Videos</button>
+                        <button class="filter-btn" data-filter="interview" data-en="Interviews" data-es="Entrevistas">Interviews</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-grid" aria-live="polite" aria-label="Media gallery">
+                <!-- Gallery items rendered here -->
+            </div>
+
+            <!-- Gallery Modal / Lightbox -->
+            <div id="galleryModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+                <div class="modal-backdrop" data-action="close" tabindex="-1"></div>
+                <div class="modal-content" role="document">
+                    <button class="modal-close" aria-label="Close">×</button>
+                    <div class="modal-body" id="modalBody" tabindex="0"></div>
+                    <div class="modal-controls">
+                        <button class="modal-prev" aria-label="Previous">◀</button>
+                        <button class="modal-next" aria-label="Next">▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Achievements -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Stats & Achievements" data-es="Estadísticas y Logros">Stats & Achievements</h2>
+            
+            <!-- Filter Options -->
+            <div class="stats-filter">
+                <button class="filter-btn active" data-filter="all" data-en="All Stats" data-es="Todas">All Stats</button>
+                <button class="filter-btn" data-filter="wins" data-en="Titles" data-es="Títulos">Titles</button>
+                <button class="filter-btn" data-filter="medals" data-en="Medals" data-es="Medallas">Medals</button>
+                <button class="filter-btn" data-filter="records" data-en="Records" data-es="Récords">Records</button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card" data-category="medals">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="stat-value">2</h3>
+                    <p class="stat-name" data-en="Olympic Medals" data-es="Medallas Olímpicas">Olympic Medals</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-category="wins">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="stat-value">5</h3>
+                    <p class="stat-name" data-en="World Championship Medals" data-es="Medallas Mundiales">World Championship Medals</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-category="wins">
+                    <div class="stat-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="stat-value">24</h3>
+                    <p class="stat-name" data-en="BWF Titles" data-es="Títulos BWF">BWF Titles</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-category="records">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="stat-value">1</h3>
+                    <p class="stat-name" data-en="World Champion" data-es="Campeona Mundial">World Champion</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-category="medals">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="stat-value">3</h3>
+                    <p class="stat-name" data-en="Commonwealth Games Medals" data-es="Medallas Juegos Commonwealth">Commonwealth Games Medals</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-category="records">
+                    <div class="stat-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3 class="stat-value">1</h3>
+                    <p class="stat-name" data-en="BWF World Tour Finals" data-es="Finales Mundial BWF">BWF World Tour Finals</p>
+                    <div class="stat-bar">
+                        <div class="stat-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Championship Chart -->
+            <div class="chart-container">
+                <h3 class="chart-title" data-en="Major Achievements by Year" data-es="Logros Principales por Año">Major Achievements by Year</h3>
+                <canvas id="championshipChart"></canvas>
+            </div>
+
+            
+        </div>
+    </section>
+
+
+    <!-- Inline icon sprite (hidden) -->
+    <svg style="display:none;" aria-hidden="true">
+      <symbol id="icon-shuttle" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19.2 3.1c-1.3.8-2.5 1.9-3.6 3.1s-2.3 2.7-3.3 3.6c-1 .9-2 1.6-2.9 2.2-.5.3-.9.5-1.2.8-.2.2-.4.5-.3.8.1.3.4.5.7.6.3.2.7.2 1.1.1 1.4-.4 3-1.1 4.7-2.1 1.7-1 3.3-2.2 4.7-3.5 1.4-1.3 2.6-2.7 3.5-4.1.6-1 1-1.9 1.3-2.7.1-.4.1-.7-.1-1-.2-.4-.6-.6-1-.5-.4 0-.9.3-1.3.6z"/>
+      </symbol>
+      <symbol id="icon-racket" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21.7 2.3c-1.8-1.3-5.2 0.5-8.2 3.6-3 3.1-4.7 6.4-3.4 8.1l-6.2 6.2 1.4 1.4 6.2-6.2c1.7 1.3 5-0.4 8.1-3.4 3.1-3 4.9-6.4 3.6-8.2l-1.6-1.5z"/>
+      </symbol>
+    </svg>
+
+    <!-- Connect Panel (collapsed like settings, expands on hover) -->
+    <section class="connect-panel" aria-label="Connect with PV Sindhu" tabindex="0" aria-expanded="false">
+        <div class="connect-header">
+            <i class="fas fa-link" aria-hidden="true"></i>
+            <span data-en="Connect" data-es="Conectar">Connect</span>
+        </div>
+        <div class="connect-body" aria-hidden="true">
+            <a class="social-link" href="https://www.instagram.com/pvsindhu1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
+            <a class="social-link" href="https://x.com/pvsindhu1" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i> X</a>
+        </div>
+    </section>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
